@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Negocio - Gestoría</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa la librería FullCalendar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+   <!-- <style>/* Estilos para el texto */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px; /* Reduce el tamaño del texto para una mejor legibilidad */
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-weight: normal; /* Cambia el peso de la fuente a normal */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2, h3 {
+            font-weight: bold; /* Añade negrita a los títulos */
+        }
+        
+        h1 {
+            font-size: 2.5em; /* Ajusta el tamaño del título principal */
+            margin-bottom: 20px; /* Añade espacio inferior al título principal */
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px; /* Ajusta el espacio inferior al título secundario */
+        }
+        
+        p {
+            margin-bottom: 15px; /* Ajusta el espacio inferior de los párrafos */
+        }
+        
+        ul {
+            padding-left: 0; /* Elimina el relleno izquierdo de las listas */
+        }
+        
+        li {
+            margin-bottom: 8px; /* Ajusta el espacio inferior de los elementos de la lista */
+        }
+        
+        a {
+            color: var(--secondary-color); /* Cambia el color de los enlaces */
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            transition: color 0.3s ease; /* Agrega una transición suave al color de los enlaces */
+        }
+        
+        a:hover {
+            color: var(--primary-color); /* Cambia el color del enlace al pasar el ratón por encima */
+        }
+        </style>-->
+</head>
+<body>
+
+
+    <div class="background-image"> </div>
+
+ <!-- Añade el video como fondo -->
+ <video autoplay muted loop id="background-video">
+    <source src="logo2mp4.mp4" type="video/mp4" >
+    Tu navegador no soporta el elemento de video.
+</video>
+
+<header>
+    <!--<div class="container">
+        <div class="iconos">
+            <img src="logoultimo2.jpg" alt="Logo de Z.A.E Zubimendi Administración Empresarial">
+        </div>-->
+        <h1>Zubimendi Administración Empresarial</h1>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    
+<section id="banner">
+    <div class="container">
+        <h2>Servicios de Gestoría Profesional</h2>
+        <p> <span class="offered-text">Ofrecemos</span> una amplia gama de servicios de gestoría para satisfacer tus necesidades financieras y fiscales.</p>
+        <a href="#contacto" class="btn">Contáctanos</a>
+    </div>
+</section>
+
+    <section id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Declaración de la Renta</li>
+                <li>Contabilidad para Autónomos</li>
+                <li>Microempresas</li>
+                <li>Pymes</li>
+                <li>Asesoramiento Fiscal</li>
+                <!-- Agrega más servicios según necesites -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="nosotros">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos un equipo de profesionales dedicados a proporcionar servicios de gestoría de alta calidad y personalizados.</p>
+            <h3>Misión:</h3>
+            <p>Nuestra misión es acompañar a las empresas a lo largo de su ciclo de vida, priorizando la generación máxima de valor en su entorno. Además, nos comprometemos a ser un aliado fundamental en el crecimiento de nuestros clientes, brindándoles apoyo en su camino emprendedor y empresarial.</p>
+            <h3>Visión:</h3>
+            <p>Buscamos establecer una simbiosis que beneficie socialmente el entorno donde operan nuestros clientes. Esto se traduce en la creación de riqueza, la generación de empleo, la satisfacción de los inversores y un desarrollo sostenible para la sociedad y los grupos de interés involucrados.</p>
+            <h3>Valores:</h3>
+            <p>Nos regimos por valores fundamentales como el diálogo, la transparencia en la gestión, la orientación al cliente, la prestación de servicios de calidad y el respeto mutuo. Fomentamos la empatía hacia los empresarios, la tolerancia y la cortesía en todas nuestras interacciones. Estos valores guían nuestra relación simbiótica con los clientes, junto con el compromiso de estar cerca y comprometidos con todos los actores relacionados con ellos.</p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>¡Contáctanos hoy para obtener más información sobre nuestros servicios!</p>
+            <p id="fecha-hora"></p>
+            <!-- Aquí puedes agregar la etiqueta <form> -->
+                <form action="formulario_contacto.py" method="post">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- Aside con calendario, enlace a la Agencia Tributaria y enlace a chat de WhatsApp -->
+    <aside>
+        <h2>Recursos</h2>
+        <ul>
+            <!--<li><a href="#" id="ver-calendario">Calendario</a></li>
+            <div id="calendario"></div> Este es el div para el calendario -->
+            <li><a href="https://www.agenciatributaria.es/" target="_blank">Agencia Tributaria</a></li>
+            <li><a href="mailto:zubimendi@adminempresarial.onmicrosoft.com">Correo Electrónico</a></li>
+            <li><a href="#" id="whatsapp">Chat de WhatsApp</a></li>
+        </ul>
+    </aside>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Zubimendi Administración Empresarial - Gestoría</p>
+        </div>
+    </footer>
+
+    <!-- Caja de chat de consulta -->
+    <div class="chat-box">
+        <h3>¿Necesitas ayuda?</h3>
+        <p>¡Haznos tu consulta aquí!</p>
+        <button class="btn">Abrir Chat</button>
+    </div>
+
+    <!-- Scripts -->
+   
+    <script>
+        // Función para obtener la fecha y hora actual
+    // Función para actualizar la fecha y hora actual
+    function actualizarFechaHora() {
+        var fechaHora = new Date();
+        var fecha = fechaHora.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
+        var hora = fechaHora.toLocaleTimeString('es-ES', { hour: 'numeric', minute: 'numeric', second: 'numeric' });
+        document.getElementById('fecha-hora').innerHTML = 'Fecha y hora actual: ' + fecha + ', ' + hora;
+    }
+
+    // Llamar a la función para mostrar la fecha y hora actual al cargar la página
+    actualizarFechaHora();
+
+    // Actualizar la fecha y hora cada segundo
+    setInterval(actualizarFechaHora, 1000);
+
+
+
+        // Inicializar el calendario
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendario');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+
+        
+
+        // Enlace de WhatsApp
+        document.getElementById('whatsapp').addEventListener('click', function() {
+            // Reemplaza 'NUMERO_DE_WHATSAPP' con tu número de WhatsApp
+            var numeroWhatsApp = 0034668510658;
+            window.open('https://wa.me/' + numeroWhatsApp);
+        });
+    </script>
+    
+
+</body>
+</html>
